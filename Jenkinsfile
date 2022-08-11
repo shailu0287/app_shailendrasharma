@@ -38,7 +38,7 @@ pipeline {
         stage('Build Solution') {
             steps {
                 echo "Build Solution"
-                  bat "\"${tool 'msbuilddefault'}\" nagp-devops-us.sln /p:Configuration=Release /p:Platform=\"Any CPU\" /p:ProductVersion=1.0.0.${env.BUILD_NUMBER}"
+                  bat "\"${tool 'MSBUILD_Home'}\" nagp-devops-us.sln /p:Configuration=Release /p:Platform=\"Any CPU\" /p:ProductVersion=1.0.0.${env.BUILD_NUMBER}"
             }
         }
         stage('Sonar Scan End'){
