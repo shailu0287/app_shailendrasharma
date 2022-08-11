@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "A0RfZEs8T7Vr12GMgEHLFkJPikjRyJxZez9CQAwYiYt2vaEFTQUJyois9Np6aVsV+OAYrrSFQlOOZJme1eZR/A==",
+  "dgSpecHash": "zDd5beG/VtYB5y1sTkrTJOcsCvTv16Pt4/6qgPzU5T8rmrAkLQi1l6BX9IvdzaBob1z/5QhTp5PQN6Jl5iRExw==",
   "success": true,
   "projectFilePath": "C:\\Users\\shailendrasharma\\Source\\Repos\\app_shailendrasharma\\test-project\\test-project.csproj",
   "expectedPackageFiles": [
@@ -14,6 +14,7 @@
     "C:\\Users\\shailendrasharma\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\shailendrasharma\\.nuget\\packages\\microsoft.testplatform.objectmodel\\16.7.1\\microsoft.testplatform.objectmodel.16.7.1.nupkg.sha512",
     "C:\\Users\\shailendrasharma\\.nuget\\packages\\microsoft.testplatform.testhost\\16.7.1\\microsoft.testplatform.testhost.16.7.1.nupkg.sha512",
+    "C:\\Users\\shailendrasharma\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.11.1\\microsoft.visualstudio.azure.containers.tools.targets.1.11.1.nupkg.sha512",
     "C:\\Users\\shailendrasharma\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\shailendrasharma\\.nuget\\packages\\moq\\4.14.5\\moq.4.14.5.nupkg.sha512",
     "C:\\Users\\shailendrasharma\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
