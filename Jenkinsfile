@@ -1,9 +1,9 @@
 pipeline {
      environment { 
-        registry = "shailu0287/jenkins" 
+        registry = "shailu0287/app_shailendrasharma" 
         registryCredential = 'dockerhub_id'
         dockerImage = '' 
-        scannerHome = tool 'sonarscanner'
+        scannerHome = tool 'sonar_scanner_dotnet'
         containerName = "Shailendra"
         PROJECT_ID = 'nagpjenkinsdevops'
         CLUSTER_NAME = 'nagpcluster-1'
@@ -17,33 +17,33 @@ pipeline {
             steps {
                  cleanWs()
                    echo "Github checkout"
-                  checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://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@github.com/shailu0287/JenkinsTest.git']]])
+                  checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/shailu0287/app_shailendrasharma.git']]])
             }
         }
         stage('Nuget Restore') {
             steps {
                   echo "nuget restore"
-                  bat 'dotnet restore \"WebApplication4.sln\"'
+                  bat 'dotnet restore \"nagp-devops-us.sln\"'
             }
         }
         stage('Sonar Scan Start'){
             steps{
-                withSonarQubeEnv('sonarserver') {
+                withSonarQubeEnv('Test_Sonar') {
                         echo "Sonar scan start"
                         echo "${scannerHome}"
-                        bat "${scannerHome}\\SonarScanner.MSBuild.exe begin /k:\"Pan33r\" /d:sonar.login=\"squ_d23f21a836ee8b5fb7815ebc3cbba256c6d4537c\""
+                        bat "${scannerHome}\\SonarScanner.MSBuild.exe begin /k:\"sonar-shailendrasharma\" /d:sonar.login=\"squ_d23f21a836ee8b5fb7815ebc3cbba256c6d4537c\""
                     }
             }
         }
         stage('Build Solution') {
             steps {
                 echo "Build Solution"
-                  bat "\"${tool 'msbuilddefault'}\" WebApplication4.sln /p:Configuration=Release /p:Platform=\"Any CPU\" /p:ProductVersion=1.0.0.${env.BUILD_NUMBER}"
+                  bat "\"${tool 'msbuilddefault'}\" nagp-devops-us.sln /p:Configuration=Release /p:Platform=\"Any CPU\" /p:ProductVersion=1.0.0.${env.BUILD_NUMBER}"
             }
         }
         stage('Sonar Scan End'){
             steps{
-                withSonarQubeEnv('sonarserver') {
+                withSonarQubeEnv('Test_Sonar') {
                      echo "${scannerHome}"
                       echo "sonar scan end"
                      bat "${scannerHome}\\SonarScanner.MSBuild.exe end /d:sonar.login=\"squ_d23f21a836ee8b5fb7815ebc3cbba256c6d4537c\""
@@ -99,11 +99,6 @@ pipeline {
             }
 
         }
-        stage('Deploy to GKE') {
-            steps{
-                echo "Deployment started ..."
-                step([$class: 'KubernetesEngineBuilder', projectId: env.PROJECT_ID, clusterName: env.CLUSTER_NAME, location: env.LOCATION, manifestPattern: 'deployment.yaml', credentialsId: env.CREDENTIALS_ID, verifyDeployments: true])
-            }
-        }
+        
     }
 }
