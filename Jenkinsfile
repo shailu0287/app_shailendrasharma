@@ -41,6 +41,14 @@ pipeline {
                   bat "\"${tool 'MSBUILD_Home'}\" nagp-devops-us.sln /p:Configuration=Release /p:Platform=\"Any CPU\" /p:ProductVersion=1.0.0.${env.BUILD_NUMBER}"
             }
         }
+          stage("Test case execution") {
+            when {
+                branch 'master'
+            }
+            steps {
+                bat 'dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura'
+            }
+        }
         stage('Sonar Scan End'){
             steps{
                 withSonarQubeEnv('Test_Sonar') {
