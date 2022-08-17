@@ -1,11 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "nSebEnioESXH7Culpez5iQHyqzcRG5NKBVgc/ZlJSBLnABfysl2YiLASWQLgP2k2dAK37+aNBoWiaXYrFk6GYQ==",
+  "dgSpecHash": "my1Wpa1UJPviAsXeSMVcrIh4pX/nY0dXtf3qzm6G+kaVMoXq3ZVk20VtaP0HebsZbYqLu4LV8SVuj1OGL1Xf+g==",
   "success": true,
   "projectFilePath": "C:\\Users\\shailendrasharma\\Source\\Repos\\app_shailendrasharma\\nagp-devops-us\\nagp-devops-us.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\shailendrasharma\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.11.1\\microsoft.visualstudio.azure.containers.tools.targets.1.11.1.nupkg.sha512",
-    "C:\\Users\\shailendrasharma\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.25\\microsoft.netcore.app.host.win-x64.3.1.25.nupkg.sha512"
+    "C:\\Users\\shailendrasharma\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.11.1\\microsoft.visualstudio.azure.containers.tools.targets.1.11.1.nupkg.sha512"
   ],
   "logs": []
 }

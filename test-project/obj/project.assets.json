@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {
+    "net5.0": {
       "Castle.Core/4.4.0": {
         "type": "package",
         "dependencies": {
@@ -1827,7 +1827,7 @@
       },
       "nagp-devops-us/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
+        "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.11.1"
         },
@@ -6297,7 +6297,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": [
+    "net5.0": [
       "Microsoft.NET.Test.Sdk >= 16.7.1",
       "Moq >= 4.14.5",
       "coverlet.collector >= 1.3.0",
@@ -6324,15 +6324,15 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "netcoreapp3.1"
+        "net5.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "net5.0": {
+          "targetAlias": "net5.0",
           "projectReferences": {
             "C:\\Users\\shailendrasharma\\Source\\Repos\\app_shailendrasharma\\nagp-devops-us\\nagp-devops-us.csproj": {
               "projectPath": "C:\\Users\\shailendrasharma\\Source\\Repos\\app_shailendrasharma\\nagp-devops-us\\nagp-devops-us.csproj"
@@ -6347,8 +6347,8 @@
       }
     },
     "frameworks": {
-      "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
+      "net5.0": {
+        "targetAlias": "net5.0",
         "dependencies": {
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
