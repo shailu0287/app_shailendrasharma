@@ -108,6 +108,14 @@ pipeline {
             }
 
         }
+         stage('Deploy to GKE') {
+            steps{
+                echo "Deployment started ..."
+                 steps{
+                         bat 'kubectl apply -f kubernetes.yaml'
+                 }
+            }
+        }
         
     }
 }
