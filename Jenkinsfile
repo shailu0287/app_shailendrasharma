@@ -111,7 +111,7 @@ pipeline {
          stage('Deploy to GKE') {
             steps{
                 echo "Deployment started ..."
-                bat "kubectl apply -f Kubernetes.yaml"
+                bat "kubectl apply -f \k8s\"
             }
         }
         
