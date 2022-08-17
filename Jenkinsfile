@@ -47,7 +47,7 @@ pipeline {
                 branch 'master'
             }
             steps {
-                 bat "dotnet test test-project\\bin\\Debug\\net5.0\\test-project.dll --collect \"Code Coverage\""
+                 bat "dotnet test test-project\\bin\\Debug\\net5.0\\test-project.dll --collect \"XPlat Code Coverage\""
             }
         }
         stage('Sonar Scan End'){
