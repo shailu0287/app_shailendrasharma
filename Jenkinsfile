@@ -47,7 +47,7 @@ pipeline {
                 branch 'master'
             }
             steps {
-                 bat "${VSTest_Home} test-project\\bin\\Release\\netcoreapp3.1\\test-project.dll /EnableCodeCoverage /Logger:trx"
+                 bat "${VSTest_Home} test-project\\bin\\Debug\\netcoreapp3.1\\test-project.dll /EnableCodeCoverage /Logger:trx"
             }
         }
         stage('Sonar Scan End'){
