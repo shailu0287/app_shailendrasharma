@@ -17,6 +17,13 @@ spec:
         ports:
           - containerPort: 80
             protocol: TCP
+        env:
+          - name: ASPNETCORE_ENVIRONMENT
+            valueFrom: 
+              configMapKeyRef: 
+                name: shailendra-configmap
+                key: dotNetEnv
+              
   replicas: 4
   selector:
     matchLabels:
