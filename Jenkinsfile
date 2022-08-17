@@ -9,6 +9,7 @@ pipeline {
         CLUSTER_NAME = 'nagpcluster-1'
         LOCATION = 'us-central1-c'
         CREDENTIALS_ID = 'NAGPJenkinsDevops'
+        VSTest_Home = tool 'VSTest_Home'
     }
     agent any
 
@@ -46,7 +47,7 @@ pipeline {
                 branch 'master'
             }
             steps {
-                bat 'dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura'
+                 bat "${VSTest_Home} test-project\\bin\\Release\\netcoreapp3.1\\test-project.dll /EnableCodeCoverage /Logger:trx"
             }
         }
         stage('Sonar Scan End'){
