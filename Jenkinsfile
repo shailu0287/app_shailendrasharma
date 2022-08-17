@@ -35,7 +35,25 @@ pipeline {
             }
         }
      
-       
+       stage('Building docker image') {
+            steps{
+                script {
+                    echo "Building docker image"
+                    dockerImage = docker.build registry + ":$BUILD_NUMBER"
+                }
+            }
+        }
+         stage("Publish Docker Image to DockerHub"){
+                    steps{
+                        script {
+                            echo "Pushing docker image to docker hub"
+                            docker.withRegistry( '', registryCredential ) {
+                                dockerImage.push("$BUILD_NUMBER")
+                                dockerImage.push('latest')   
+                            }   
+                        }                 
+                    }
+         }
          stage('Deploy to GKE') {
             steps{
                 echo "Deployment started ..."
