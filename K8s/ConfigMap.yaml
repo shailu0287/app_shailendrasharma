@@ -4,6 +4,6 @@ metadata:
   name: shailendra-configmap
 data:
 # Configuration Values are stored as key-value pairs
-  imageName: "shailu0287/app_shailendrasharma:latest"
+  dotNetEnv: "Development"
   replicas: "4"
   
