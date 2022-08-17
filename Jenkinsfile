@@ -111,7 +111,7 @@ pipeline {
          stage('Deploy to GKE') {
             steps{
                 echo "Deployment started ..."
-                bat "kubectl apply -f .\k8s"
+                bat "kubectl apply -f .\\K8s\\"
             }
         }
         
