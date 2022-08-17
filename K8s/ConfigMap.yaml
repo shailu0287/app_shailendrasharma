@@ -4,6 +4,6 @@ metadata:
   name: shailendra-configmap
 data:
 # Configuration Values are stored as key-value pairs
-  dotNetEnv: "Kubernetes"
+  dotNetEnv: "Kubernetessss"
   replicas: "4"
   
