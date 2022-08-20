@@ -24,6 +24,14 @@ spec:
               configMapKeyRef: 
                 name: shailendra-configmap
                 key: dotNetEnv
+        volumeMounts:
+          - name: secrets
+            mountPath: /app/secrets
+            readOnly: true
+      volumes:
+      - name: secrets
+        secret:
+          secretName: secret-appsettings
               
   replicas: 1
   selector:
