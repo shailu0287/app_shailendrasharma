@@ -39,7 +39,7 @@ pipeline {
                 branch 'develop'
             }
             steps {
-                echo "Build Solution"
+                echo "Release Artifect"
                   bat "dotnet publish -c Release -p:UseAppHost=false"
             }
         }
@@ -48,6 +48,7 @@ pipeline {
                 branch 'master'
             }
             steps {
+		 echo "Unit test run"
                  bat "dotnet test test-project\\bin\\Debug\\net5.0\\test-project.dll --collect \"XPlat Code Coverage\""
             }
         }
@@ -57,7 +58,6 @@ pipeline {
             }
             steps{
                 withSonarQubeEnv('Test_Sonar') {
-                     echo "${scannerHome}"
                       echo "sonar scan end"
                      bat "${scannerHome}\\SonarScanner.MSBuild.exe end /d:sonar.login=\"squ_b002218a4d4dd88eaf93b1e01834f4b934f33079\""
                     }
@@ -67,7 +67,6 @@ pipeline {
             steps{
                 script {
                     docker.withRegistry('https://index.docker.io/v1/', registryCredential) {
-                       // def dockerImage = docker.build("shailu0287/app_shailendrasharma/i-shailendrasharma-${BRANCH_NAME}:latest")
 			dockerImage = docker.build registry + ":i-shailendrasharma-${BRANCH_NAME}"
 		        dockerImage.push("i-shailendrasharma-${BRANCH_NAME}")
                         dockerImage.push("latest")
