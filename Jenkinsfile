@@ -41,6 +41,9 @@ pipeline {
             }
         }
 	stage('Release Artifect') {
+	     when {
+                branch 'develop'
+            }
             steps {
                 echo "Build Solution"
                   bat "dotnet publish -c Release -p:UseAppHost=false"
