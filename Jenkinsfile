@@ -87,14 +87,7 @@ pipeline {
                 }
             }    
         } 
-         stage('Docker Deployment'){
-            steps{
-                echo "${registry}:${BUILD_NUMBER}"
-                echo "Docker Deployment by using docker hub's image"
-                bat "docker run -d -p 7200:80 --name c-${containerName}-master ${registry}:${BUILD_NUMBER}"
-            }
-
-        }
+       
          stage('Deploy to GKE') {
             steps{
                 echo "Deployment started ..."
