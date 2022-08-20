@@ -69,26 +69,18 @@ pipeline {
                     }
             }
         }
-        stage('Building docker image') {
+        stage('Build and push docker image') {
             steps{
                 script {
-                    echo "Building docker image"
-                    dockerImage = docker.build registry + ":$BUILD_NUMBER"
+                    docker.withRegistry('https://index.docker.io/v1/', registryCredential) {
+                       // def dockerImage = docker.build("shailu0287/app_shailendrasharma/i-shailendrasharma-${BRANCH_NAME}:latest")
+			dockerImage = docker.build registry + ":i-shailendrasharma-${BRANCH_NAME}"
+		        dockerImage.push("i-shailendrasharma-${BRANCH_NAME}")
+                        dockerImage.push("latest")
                 }
             }
         }
-
-                stage("Publish Docker Image to DockerHub"){
-                    steps{
-                        script {
-                            echo "Pushing docker image to docker hub"
-                            docker.withRegistry( '', registryCredential ) {
-                                dockerImage.push("$BUILD_NUMBER")
-                                dockerImage.push('latest')   
-                            }   
-                        }                 
-                    }
-        } 
+	}
 
          stage('Deploy to GKE') {
             steps{
