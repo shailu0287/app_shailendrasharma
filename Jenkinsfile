@@ -74,6 +74,7 @@ pipeline {
                 }
             }
         }
+
                 stage("Publish Docker Image to DockerHub"){
                     steps{
                         script {
@@ -84,9 +85,8 @@ pipeline {
                             }   
                         }                 
                     }
-                 
         } 
-       
+
          stage('Deploy to GKE') {
             steps{
                 echo "Deployment started ..."
