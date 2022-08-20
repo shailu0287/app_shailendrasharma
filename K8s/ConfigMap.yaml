@@ -3,6 +3,7 @@ apiVersion: v1
 metadata:
   name: shailendra-configmap
   namespace: kubernetes-cluster-shailendrasharma
+
 data:
 # Configuration Values are stored as key-value pairs
   dotNetEnv: "Kubernetessss"
