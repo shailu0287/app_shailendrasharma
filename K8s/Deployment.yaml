@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: shailendra-nagpapp-deployment
+  namespace: kubernetes-cluster-shailendrasharma
   labels:
     app: nagpapp
 spec:
