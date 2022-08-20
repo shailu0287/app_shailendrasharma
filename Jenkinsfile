@@ -74,26 +74,6 @@ pipeline {
                 }
             }
         }
-        stage('Containers'){
-            parallel{
-                stage("Run PreContainer Checks"){
-                    environment{
-                        containerID = "${bat(script: 'docker ps -a -q -f name="c-Shailendra-master"', returnStdout: true).trim().readLines().drop(1).join("")}"
-                    }
-                    steps{
-                        script{
-                            echo "Run PreContainer Checks"
-                            echo env.containerName
-                            echo "containerID is "
-                            echo env.containerID
-                            
-                            if(env.containerID != null){
-                                echo "Stop container and remove from stopped container list too"
-                                bat "docker stop ${env.containerID} && docker rm ${env.containerID}"
-                            }                         
-                        }
-                    }
-                }
                 stage("Publish Docker Image to DockerHub"){
                     steps{
                         script {
