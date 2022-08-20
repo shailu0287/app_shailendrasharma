@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: shailendra-nagpapp-container-m
-        image: shailu0287/app_shailendrasharma:i-shailendrasharma-master
+        image: shailu0287/app_shailendrasharma:latest
         ports:
           - containerPort: 80
             protocol: TCP
@@ -33,7 +33,7 @@ spec:
         secret:
           secretName: secret-appsettings
               
-  replicas: 4
+  replicas: 1
   selector:
     matchLabels:
       app: nagpapp
