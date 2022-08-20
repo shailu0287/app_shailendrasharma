@@ -4,18 +4,12 @@ pipeline {
         registryCredential = 'dockerhub_id'
         dockerImage = '' 
         scannerHome = tool 'sonar_scanner_dotnet'
-        containerName = "Shailendra"
+	SONAR_PROJECT_KEY= 'sonar-surender'
+	MSBUILD = tool 'MSBUILD_Home'
     }
     agent any
 
     stages {
-        stage('Code Checkout') {
-            steps {
-                 cleanWs()
-                   echo "Github checkout"
-                  checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/shailu0287/app_shailendrasharma.git']]])
-            }
-        }
         stage('Nuget Restore') {
             steps {
                   echo "nuget restore"
@@ -30,14 +24,14 @@ pipeline {
                 withSonarQubeEnv('Test_Sonar') {
                         echo "Sonar scan start"
                         echo "${scannerHome}"
-                        bat "${scannerHome}\\SonarScanner.MSBuild.exe begin /k:\"sonar-shailendrasharma\" /d:sonar.login=\"squ_b002218a4d4dd88eaf93b1e01834f4b934f33079\""
+			bat "${scannerHome}\\SonarScanner.MSBuild.exe begin /k:\"${SONAR_PROJECT_KEY}\" /d:sonar.login=\"squ_b002218a4d4dd88eaf93b1e01834f4b934f33079\""
                     }
             }
         }
         stage('Build Solution') {
             steps {
                 echo "Build Solution"
-                  bat "\"${tool 'MSBUILD_Home'}\" nagp-devops-us.sln /p:Configuration=Release /p:Platform=\"Any CPU\" /p:ProductVersion=1.0.0.${env.BUILD_NUMBER}"
+                  bat "\"${MSBUILD}\" nagp-devops-us.sln /p:Configuration=Release /p:Platform=\"Any CPU\" /p:ProductVersion=1.0.0.${env.BUILD_NUMBER}"
             }
         }
 	stage('Release Artifect') {
