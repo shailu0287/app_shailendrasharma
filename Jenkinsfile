@@ -63,18 +63,7 @@ pipeline {
                     }
             }
         }
-        stage('Build and push docker image') {
-            steps{
-                script {
-                    docker.withRegistry('https://index.docker.io/v1/', registryCredential) {
-			dockerImage = docker.build registry + ":i-shailendrasharma-${BRANCH_NAME}"
-		        dockerImage.push("i-shailendrasharma-${BRANCH_NAME}")
-                        dockerImage.push("latest")
-                }
-            }
-        }
-	}
-
+       
          stage('Deploy to GKE') {
             steps{
                 echo "Deployment started ..."
