@@ -7,5 +7,5 @@ metadata:
 data:
 # Configuration Values are stored as key-value pairs
   dotNetEnv: "Kubernetessss"
-  replicas: "4"
+  applicationName: "NAGP DEV OPS"
   
