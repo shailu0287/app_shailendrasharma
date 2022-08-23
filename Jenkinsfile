@@ -4,7 +4,7 @@ pipeline {
         registryCredential = 'dockerhub_id'
         dockerImage = '' 
         scannerHome = tool 'sonar_scanner_dotnet'
-	SONAR_PROJECT_KEY= 'sonar-surender'
+	SONAR_PROJECT_KEY= 'sonar-shailendrasharma'
 	MSBUILD = tool 'MSBUILD_Home'
     }
     agent any
