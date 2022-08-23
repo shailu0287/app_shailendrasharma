@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\shailendrasharma\\Source\\Repos\\app_shailendrasharma\\test-project\\test-project.csproj": {}
+    "C:\\Users\\shailendrasharma\\source\\repos\\app_shailendrasharma\\test-project\\test-project.csproj": {}
   },
   "projects": {
-    "C:\\Users\\shailendrasharma\\Source\\Repos\\app_shailendrasharma\\nagp-devops-us\\nagp-devops-us.csproj": {
+    "C:\\Users\\shailendrasharma\\source\\repos\\app_shailendrasharma\\nagp-devops-us\\nagp-devops-us.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\shailendrasharma\\Source\\Repos\\app_shailendrasharma\\nagp-devops-us\\nagp-devops-us.csproj",
+        "projectUniqueName": "C:\\Users\\shailendrasharma\\source\\repos\\app_shailendrasharma\\nagp-devops-us\\nagp-devops-us.csproj",
         "projectName": "nagp-devops-us",
-        "projectPath": "C:\\Users\\shailendrasharma\\Source\\Repos\\app_shailendrasharma\\nagp-devops-us\\nagp-devops-us.csproj",
+        "projectPath": "C:\\Users\\shailendrasharma\\source\\repos\\app_shailendrasharma\\nagp-devops-us\\nagp-devops-us.csproj",
         "packagesPath": "C:\\Users\\shailendrasharma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\shailendrasharma\\Source\\Repos\\app_shailendrasharma\\nagp-devops-us\\obj\\",
+        "outputPath": "C:\\Users\\shailendrasharma\\source\\repos\\app_shailendrasharma\\nagp-devops-us\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\shailendrasharma\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -67,14 +67,14 @@
         }
       }
     },
-    "C:\\Users\\shailendrasharma\\Source\\Repos\\app_shailendrasharma\\test-project\\test-project.csproj": {
+    "C:\\Users\\shailendrasharma\\source\\repos\\app_shailendrasharma\\test-project\\test-project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\shailendrasharma\\Source\\Repos\\app_shailendrasharma\\test-project\\test-project.csproj",
+        "projectUniqueName": "C:\\Users\\shailendrasharma\\source\\repos\\app_shailendrasharma\\test-project\\test-project.csproj",
         "projectName": "test-project",
-        "projectPath": "C:\\Users\\shailendrasharma\\Source\\Repos\\app_shailendrasharma\\test-project\\test-project.csproj",
+        "projectPath": "C:\\Users\\shailendrasharma\\source\\repos\\app_shailendrasharma\\test-project\\test-project.csproj",
         "packagesPath": "C:\\Users\\shailendrasharma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\shailendrasharma\\Source\\Repos\\app_shailendrasharma\\test-project\\obj\\",
+        "outputPath": "C:\\Users\\shailendrasharma\\source\\repos\\app_shailendrasharma\\test-project\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\shailendrasharma\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -91,8 +91,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\shailendrasharma\\Source\\Repos\\app_shailendrasharma\\nagp-devops-us\\nagp-devops-us.csproj": {
-                "projectPath": "C:\\Users\\shailendrasharma\\Source\\Repos\\app_shailendrasharma\\nagp-devops-us\\nagp-devops-us.csproj"
+              "C:\\Users\\shailendrasharma\\source\\repos\\app_shailendrasharma\\nagp-devops-us\\nagp-devops-us.csproj": {
+                "projectPath": "C:\\Users\\shailendrasharma\\source\\repos\\app_shailendrasharma\\nagp-devops-us\\nagp-devops-us.csproj"
               }
             }
           }

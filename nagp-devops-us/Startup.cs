@@ -55,8 +55,9 @@ namespace nagp_devops_us
 
             app.Run(async (context) =>
             {
-                var message = $"EnvironmentName: {env.EnvironmentName}\n"+
-                $"Secret value: {Configuration["Database:ConnectionString"]}";
+                var message = "Values from configmap and secrets\n" +$"EnvironmentName: {env.EnvironmentName}\n"+
+                $"Secret value: {Configuration["Database:ConnectionString"]}"+
+                $"Secret value: {Configuration["Database:APIKey"]}" ;
                 await context.Response.WriteAsync(message);
             });
 

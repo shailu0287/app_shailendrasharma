@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = nagp_devops_us
-build_property.ProjectDir = C:\Users\shailendrasharma\Source\Repos\app_shailendrasharma\nagp-devops-us\
+build_property.ProjectDir = C:\Users\shailendrasharma\source\repos\app_shailendrasharma\nagp-devops-us\

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "my1Wpa1UJPviAsXeSMVcrIh4pX/nY0dXtf3qzm6G+kaVMoXq3ZVk20VtaP0HebsZbYqLu4LV8SVuj1OGL1Xf+g==",
+  "dgSpecHash": "hfQXjkYjjQgZhyDymDTN5IQSKaL/MXLlXPIIJKz3GjtbVY0tTN2AMdSgyexWPnUKd0qAvpZl5jIPPv89loIe/w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\shailendrasharma\\Source\\Repos\\app_shailendrasharma\\nagp-devops-us\\nagp-devops-us.csproj",
+  "projectFilePath": "C:\\Users\\shailendrasharma\\source\\repos\\app_shailendrasharma\\nagp-devops-us\\nagp-devops-us.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\shailendrasharma\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.11.1\\microsoft.visualstudio.azure.containers.tools.targets.1.11.1.nupkg.sha512"
   ],

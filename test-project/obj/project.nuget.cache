@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "x+gBLtYQjqb/J+pf5HZhsVpSwqH6eudcBCwvOV7jAmQnR1ipE6LePJfr2hFjkczuOX5Gcau/rpicv3qm+5y/1Q==",
+  "dgSpecHash": "J+yhxaRhvYvFX0rfTyStD4KOMd8PNnAJ0997qahKY0XpKoDqixmDG01viVR9+QKjU9jhsInnJv1ztklnO20b4w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\shailendrasharma\\Source\\Repos\\app_shailendrasharma\\test-project\\test-project.csproj",
+  "projectFilePath": "C:\\Users\\shailendrasharma\\source\\repos\\app_shailendrasharma\\test-project\\test-project.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\shailendrasharma\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\shailendrasharma\\.nuget\\packages\\coverlet.collector\\1.3.0\\coverlet.collector.1.3.0.nupkg.sha512",
